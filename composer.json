@@ -12,6 +12,11 @@
 			"homepage": "http://www.dennismorhardt.de"
         }
     ],
+	"autoload": {
+        "psr-0" : {
+            "Auth" : "/"
+        }
+    },
     "require": {
         "php": ">=5.3.0"
     }
