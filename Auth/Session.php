@@ -28,10 +28,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-/**
-* Declare UTF-8 and the namespace
-*/
-declare(encoding='UTF-8');
 namespace Auth;
 
 /**
@@ -94,15 +90,12 @@ class Session {
 	 * 
 	 */
 	public static function check($callback) {
-		// Load cookie
-		$cookie = $_COOKIE[self::$cookiename];
-		
 		// Cookie exists?
-		if ( false == $cookie )
+		if ( !isset( $_COOKIE[self::$cookiename] ) )
 			return false;
 			
 		// Parse cookie
-		$cookie_elements = explode('|', $cookie);
+		$cookie_elements = explode('|', $_COOKIE[self::$cookiename]);
 
 		// Check if cookie has all parts
 		if ( 4 != count( $cookie_elements ) )

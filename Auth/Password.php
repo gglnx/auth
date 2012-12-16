@@ -29,10 +29,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-/**
-* Declare UTF-8 and the namespace
-*/
-declare(encoding='UTF-8');
 namespace Auth;
 
 /**
